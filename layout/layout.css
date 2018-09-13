@@ -160,3 +160,37 @@
     margin: 0px;
     padding:0px;
 }
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    font-family: "Quicksand", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    background: #ccc;
+    letter-spacing: 0.05em;
+    text-decoration:none;
+}
+    .menu li {
+        display: inline-block;
+        float: left;
+        text-decoration: none;
+        font-size: 125%;
+        font-weight: 100;
+        line-height: 1.5;
+        margin: 0;
+        color: #666;
+        letter-spacing: -0.02em;
+    }
+    .menu li a {
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .menu li a:hover {
+        background-color: #00A8D8;
+}
