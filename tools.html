@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Tools</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="layout/pure-min.css" />
+    <link rel="stylesheet" href="layout/layout.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Quicksand']
+        }
+      });
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="header">
+                <img src="/layout/images/logo.png" />
+                <h2>SCOM Management Packs by Andi Patrick</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="f5.html">F5</a></li>
+                <li><a href="tools.html">Tools</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Of Header -->
+
+    <div class="content">
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align:left">
+                <div class="pure-1-4">
+                    <h1>Loriis7</h1>
+                </div>
+                This is a simple log file management app for IIS, in the isntall folder is a file called loriis7.config.xml this has 2 entries, 
+                DaysBeforeZip and DaysBeforeDeletion. When the app runs it discovers all IIS log folders and starts to process each log file, 
+                if the file is older than DaysBeforeZip it gets zipped up, if it is older than DaysBeforeDeletion it gets deleted.<br />
+                <br />
+                Simply run the installer on your web server, modify the loriis7.config.xml file and schedule the app to run daily!<br />
+                <h1><a href="/tools/Loriis7.msi"><img src="layout/images/download-2-24.png" />&nbsp;Download</a></h1><br /
+            </div>
+            <div class="pure-u-1-2" style="text-align:left">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="pure-g">
+            <div class="pure-u-1" style="text-align:left;">
+                AP Management Packs © A. Patrick, (2018). GitHub : <a href="https://github.com/c22mort/AP.F5.Base">AP.F5.Base</a>, <a href="https://github.com/c22mort/AP.F5.LTM">AP.F5.LTM</a>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="6PV9S3B7KXCQS">
+                    <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End of Footer -->
+
+</body>
+</html>
