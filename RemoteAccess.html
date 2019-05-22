@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>AP Management Packs</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="layout/pure-min.css" />
+    <link rel="stylesheet" href="layout/layout.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Quicksand']
+        }
+      });
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <div class="header">
+                <img src="/layout/images/logo.png" />
+                <h2>SCOM Management Packs by Andi Patrick</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="f5.html">F5</a></li>
+                <li><a href="RemoteAccess.html">RemoteAccess</a></li>
+                <li><a href="tools.html">Tools</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Of Header -->
+
+    <div class="content">
+        <div class="pure-g">
+            <div class="pure-u-1-1" style="text-align:left">
+                <div class="pure-1-1">
+                    <h1>AP.Remote.Access (v19.5.5)</h1>
+                </div>
+                Microsoft Remote Access Management Pack (this is a conversion of Microsofts Remote Access 2012R2 Management Pack to make it compatible with 2012/2012R2/2016/2029.<br />
+                This is not my work merely a conversion of Microsoft Management pack with some tidying up!
+                <br /><br />
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1-2" style="text-align:left">
+                <h2>Classes</h2>
+                MicrosoftRemoteAccess<br />
+                RemoteAccessSite<br />
+                RemoteAccessServer<br />
+                VPNServer<br />
+                DirectAccessServer<br />
+                ...6To4<br />
+                ...DNS<br />
+                ...DNS64<br />
+                ...DomainController<br />
+                ...HighAvailability (NLB)<br />
+                ...IPHTTPS<br />
+                ...ISATAP<br />
+                ...Kerberos<br />
+                ...ManagementServers<br />
+                ...NAT64<br />
+                ...NetworkAdapters<br />
+                ...NetworkLocationServer<br />
+                ...NetworkSecurity<br />
+                ...OTP<br />
+                ...Services<br />
+                ...Teredo<br />
+
+                <br />
+            </div>
+            <div class="pure-u-1-2" style="text-align:left">
+                <h2>Notes</h2>
+                Install the Management Pack, a Profile will be created called "AP Remote Access Login",
+                add a Login Account to this profiles and distribute to your Remote Access Servers, this should be a Domain Account that has rights
+                to run the Powershell Command Get-RemoteAccess on the Remote Access Servers.  Without this Account being correctly distributed Discovery
+                won't happen!  Don't forget if Running SCOM 2019 to give this account "Log on as a service" rights on the Remote Access Servers.
+                Discovery Happens every 4 Hours, so be patient!
+                <br />
+                <br />
+                The Microsoft Management Pack only creates the Root Remote Access object and Sites if you are using Multisite, I have added a bit
+                to the discovery script that will create a single site named your "ConnectTo" name if you aren't running Multi-Site this can be over-ridden
+                on the Discovery, it's called CreateSingleSite, set this to false and behaviour reverts back to Standard Microsoft 2012.R2 Management Pack behaviour!
+
+                Any Questions please don't hesitate to call
+
+            </div>
+        </div>
+
+        <div class="pure-u-1">
+            <h1><a href="/files/AP.RemoteAccess.mpb"><img src="layout/images/download-2-24.png" />&nbsp;Download</a></h1>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="6PV9S3B7KXCQS">
+                <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="pure-g">
+            <div class="pure-u-1" style="text-align:left;">
+                AP Management Packs © A. Patrick, (2018). GitHub : <a href="https://github.com/c22mort/AP.F5.Base">AP.F5.Base</a>, <a href="https://github.com/c22mort/AP.F5.LTM">AP.F5.LTM</a>, <a href="https://github.com/c22mort/AP.Remote.Access">AP.Remote.Access</a>
+            </div>
+        </div>
+    </div>
+    <!-- End of Footer -->
+
+</body>
+</html>
